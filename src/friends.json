@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Hira Singh",
+    "image": "https://www.thefamouspeople.com/profiles/thumbs/hazel-keech-1.jpg",
+    "occupation": "UX Designer",
+    "location": "Columbia"
+  },
+  {
+    "id": 2,
+    "name": "James Lee",
+    "image": "https://ca-times.brightspotcdn.com/dims4/default/5d2bb98/2147483647/strip/true/crop/2048x1365+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fwww.trbimg.com%2Fimg-5b69d7e2%2Fturbine%2Fsns-201808070032--tms--celebtrvctnct-a20180807-a-20180807",
+    "occupation": "Product Owner",
+    "location": "Jersey City"
+  }
+]
