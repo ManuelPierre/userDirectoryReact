@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, {
+  Component
+} from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
@@ -10,19 +12,60 @@ class App extends Component {
     friends
   };
 
+  componentDidMount() {
+    this.sortName()
+    console.log("called")
+  }
+
+
+  sortName = () => {
+    var items = [{
+        name: 'Hira',
+     
+      },
+      {
+        name: 'James',
+        
+      }
+     
+    ];
+
+   
+
+    // sort by name
+    items.sort(function (a, b) {
+      var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+      var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+
+      // names must be equal
+      return 0;
+    });
+    console.log(items)
+  };
+
   removeFriend = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     const friends = this.state.friends.filter(friend => friend.id !== id);
     // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
+    this.setState({
+      friends
+    });
   };
+
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
+
     return (
       <Wrapper>
-        <Title>Employee List</Title>
-        <header id ="h1">Image         Name        Occupation        Location </header>
+        <Title>Friends List</Title>
+        <header id="h1"> Image Name Occupation Location</header>
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
@@ -38,5 +81,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

@@ -42,7 +42,7 @@ body {
 
  font-size: 15px;
   text-align: left;
-  margin-left: 250px;
+
   margin-right: 20px;
 
 }
@@ -50,15 +50,13 @@ body {
  
  font-size: 15px;
 
- margin-left: 250px;
  text-align: center;
 }
 #content2{
 
  font-size: 15px;
  text-align: right;
- margin-left: 250px;
- margin-right: 80px;
+
 
 }
 
@@ -75,4 +73,7 @@ body {
 
 .row > .remove:hover {
   color: #d50000;
+}
+#h1{
+  word-spacing: 400px;
 }
