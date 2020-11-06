@@ -9,31 +9,24 @@ import friends from "./friends.json";
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends
+    friends,
+    name: ""
+  };
+  removeFriend = id => {
+    // Filter this.state.friends for friends with an id not equal to the id being removed
+    const friends = this.state.friends.filter(friend => friend.id !== id);
+    // Set this.state.friends equal to the new friends array
+    this.setState({
+      friends
+    });
   };
 
-  componentDidMount() {
-    this.sortName()
-    console.log("called")
-  }
-
-
   sortName = () => {
-    var items = [{
-        name: 'Hira',
-     
-      },
-      {
-        name: 'James',
-        
-      }
-     
-    ];
 
-   
+    let updatedFriends = this.state.friends
 
     // sort by name
-    items.sort(function (a, b) {
+    updatedFriends.sort(function (a, b) {
       var nameA = a.name.toUpperCase(); // ignore upper and lowercase
       var nameB = b.name.toUpperCase(); // ignore upper and lowercase
       if (nameA < nameB) {
@@ -46,26 +39,63 @@ class App extends Component {
       // names must be equal
       return 0;
     });
-    console.log(items)
+
+    this.setState({ friends: updatedFriends });
   };
 
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
+
+
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    let value = event.target.value;
+
+    // Updating the input's state
     this.setState({
-      friends
+      name: value
     });
   };
 
-
-  // Map over this.state.friends and render a FriendCard component for each friend object
+   handleSearch = value => {
+ 
+//     //lop thru state friends and filter out to show only firends with name = this.state.name
+ 
+       let results = this.state.friends.map(friend => friend.name === value);
+            
+       
+//console.log("results",results);
+     this.setState({
+         friends:results
+       })
+}
+//   //  this.setState({
+//   //    firends: 
+//   //  })
+  
+ 
   render() {
+
+    console.log('state', this.state.name)
 
     return (
       <Wrapper>
-        <Title>Friends List</Title>
-        <header id="h1"> Image Name Occupation Location</header>
+        <Title>Employee Directory</Title>
+        <div>
+        <form className="form-inline">
+        <input id ="inputSymbol"className="form-control mr-sm-2" type="search" placeholder="Search"   onChange={this.handleInputChange}aria-label="Search"></input>
+        <button id="searchBtn"className="btn btn-outline-primary my-2 my-sm-0"  onClick={this.handleSearch} type="submit">Search</button>
+      </form>
+     </div>
+<br />
+
+<div>Click on carrots to filter names in ascending order</div>
+        <header id="h1"> 
+         <button type="button" className="btn btn-link"> Image </button>
+         <button type="button" onClick={this.sortName} className="btn btn-link"> Name </button>
+         <button type="button" className="btn btn-link"> Age </button>
+         <button type="button" className="btn btn-link"> Occupation </button>
+         <button type="button" className="btn btn-link"> Location </button>
+        </header>
+    
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}

@@ -15,6 +15,7 @@ function FriendCard(props) {
     <div className="col-sm-3 col-md-3 col-lg-3" id ="content">
            {props.name}
             </div>
+            
             <div className="col-sm-2 col-md-2 col-lg-3" id ="content1">
            {props.occupation}
             </div>
