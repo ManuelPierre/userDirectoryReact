@@ -35,5 +35,77 @@
     "age": 57,
     "phone": "(316)-925-1002"
   
-  }
+  },
+  {
+    "id":4,
+   "gender": "male",
+   "name": "Darrell Carr",
+   "image":"https://randomuser.me/api/portraits/men/5.jpg",
+   "occupation": "Developer",
+   "location": "Omaha",
+   "email": "darrell.carr@example.com",
+   "age": 57,
+   "phone": "(316)-925-1002"
+ 
+ },
+ {
+  "id":5,
+ "gender": "male",
+ "name": "Darrell Carr",
+ "image":"https://randomuser.me/api/portraits/men/5.jpg",
+ "occupation": "Developer",
+ "location": "Omaha",
+ "email": "darrell.carr@example.com",
+ "age": 57,
+ "phone": "(316)-925-1002"
+
+},
+{
+  "id":6,
+ "gender": "male",
+ "name": "Darrell Carr",
+ "image":"https://randomuser.me/api/portraits/men/5.jpg",
+ "occupation": "Developer",
+ "location": "Omaha",
+ "email": "darrell.carr@example.com",
+ "age": 57,
+ "phone": "(316)-925-1002"
+
+},
+{
+  "id":7,
+ "gender": "male",
+ "name": "Darrell Carr",
+ "image":"https://randomuser.me/api/portraits/men/5.jpg",
+ "occupation": "Developer",
+ "location": "Omaha",
+ "email": "darrell.carr@example.com",
+ "age": 57,
+ "phone": "(316)-925-1002"
+
+},
+{
+  "id":8,
+ "gender": "male",
+ "name": "Darrell Carr",
+ "image":"https://randomuser.me/api/portraits/men/5.jpg",
+ "occupation": "Developer",
+ "location": "Omaha",
+ "email": "darrell.carr@example.com",
+ "age": 57,
+ "phone": "(316)-925-1002"
+
+},
+{
+  "id":9,
+ "gender": "male",
+ "name": "Darrell Carr",
+ "image":"https://randomuser.me/api/portraits/men/5.jpg",
+ "occupation": "Developer",
+ "location": "Omaha",
+ "email": "darrell.carr@example.com",
+ "age": 57,
+ "phone": "(316)-925-1002"
+
+}
 ]

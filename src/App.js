@@ -10,9 +10,15 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     friends,
-    name: ""
+    name: "",
+    friendsCopy: [{}]
     
   };
+
+componentDidMount() {
+  this.setState({friendsCopy: this.state.friends})
+}
+  
   removeFriend = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     const friends = this.state.friends.filter(friend => friend.id !== id);
@@ -55,22 +61,23 @@ class App extends Component {
       name: value
     
     })
+
+    this.setState({friends: this.state.friendsCopy})
     console.log("value",value);
-    let results = this.state.friends.filter(friend => friend.name === value );
-               
-    console.log("results",results);
+
    
   };
 
    handleSearch = event => {
     event.preventDefault();
 
-  let value = this.state.name
+  let value = this.state.name.toUpperCase();
   console.log("Nameeee",value )
-  this.setState({ value});
-        
-
-     
+  let results = this.state.friends.filter(friend => friend.name.toUpperCase() === value || friend.name.toUpperCase().includes(value) );
+               
+  console.log("results",results);
+  this.setState({ friends: results });
+            
 };
 
  
@@ -89,15 +96,16 @@ class App extends Component {
      </div>
 <br />
 
-<div>Click on carrots to filter names in ascending order</div>
-        <header id="h1"> 
+{/* <div>Click on carrots to filter names in ascending order</div> */}
+        <div>
+          <header id="h1"> 
          <button type="button" className="btn btn-link"> Image </button>
          <button type="button" onClick={this.sortName} className="btn btn-link"> Name </button>
          <button type="button" className="btn btn-link"> Age </button>
          <button type="button" className="btn btn-link"> Occupation </button>
          <button type="button" className="btn btn-link"> Location </button>
         </header>
-    
+    </div>
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
