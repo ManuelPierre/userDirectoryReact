@@ -10,7 +10,7 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     friends,
-    name: "",
+    name: ""
     
   };
   removeFriend = id => {
@@ -55,25 +55,23 @@ class App extends Component {
       name: value
     
     })
-    console.log("value",value)
+    console.log("value",value);
     let results = this.state.friends.filter(friend => friend.name === value );
-         
-       
+               
     console.log("results",results);
+   
   };
 
-   handleSearch = (event,value) => {
+   handleSearch = event => {
     event.preventDefault();
 
-  
-//     //lop thru state friends and filter out to show only firends with name = this.state.name
- 
-       let results = this.state.friends.filter(friend => friend.name === value );
-         
-       
-console.log("results",value);
-     this.setState({ freinds: results });
-}
+  let value = this.state.name
+  console.log("Nameeee",value )
+  this.setState({ value});
+        
+
+     
+};
 
  
   render() {
