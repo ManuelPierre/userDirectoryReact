@@ -10,7 +10,8 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     friends,
-    name: ""
+    name: "",
+    
   };
   removeFriend = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
@@ -52,29 +53,32 @@ class App extends Component {
     // Updating the input's state
     this.setState({
       name: value
-    });
+    
+    })
+    console.log("value",value)
+    let results = this.state.friends.filter(friend => friend.name === value );
+         
+       
+    console.log("results",results);
   };
 
-   handleSearch = value => {
- 
+   handleSearch = (event,value) => {
+    event.preventDefault();
+
+  
 //     //lop thru state friends and filter out to show only firends with name = this.state.name
  
-       let results = this.state.friends.map(friend => friend.name === value);
-            
+       let results = this.state.friends.filter(friend => friend.name === value );
+         
        
-//console.log("results",results);
-     this.setState({
-         friends:results
-       })
+console.log("results",value);
+     this.setState({ freinds: results });
 }
-//   //  this.setState({
-//   //    firends: 
-//   //  })
-  
+
  
   render() {
 
-    console.log('state', this.state.name)
+   
 
     return (
       <Wrapper>
