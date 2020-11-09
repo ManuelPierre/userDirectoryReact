@@ -1,6 +1,4 @@
-import React, {
-  Component
-} from "react";
+import React, {Component} from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
@@ -18,8 +16,7 @@ class App extends Component {
 componentDidMount() {
   this.setState({friendsCopy: this.state.friends})
 }
-  
-  removeFriend = id => {
+    removeFriend = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     const friends = this.state.friends.filter(friend => friend.id !== id);
     // Set this.state.friends equal to the new friends array
@@ -28,7 +25,7 @@ componentDidMount() {
     });
   };
 
-  sortName = () => {
+     sortName = () => {
 
     let updatedFriends = this.state.friends
 
@@ -52,7 +49,7 @@ componentDidMount() {
 
 
 
-  handleInputChange = event => {
+    handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
 
@@ -68,7 +65,7 @@ componentDidMount() {
    
   };
 
-   handleSearch = event => {
+    handleSearch = event => {
     event.preventDefault();
 
   let value = this.state.name.toUpperCase();
@@ -80,32 +77,47 @@ componentDidMount() {
             
 };
 
- 
   render() {
 
-   
-
-    return (
+      return (
       <Wrapper>
+            <div className="container">
         <Title>Employee Directory</Title>
-        <div>
+        <h6> Click on the Name to sort</h6>
+          
+<div className="row no-gutters">
+  <div className="col-auto">
         <form className="form-inline">
         <input id ="inputSymbol"className="form-control mr-sm-2" type="search" placeholder="Search"   onChange={this.handleInputChange}aria-label="Search"></input>
-        <button id="searchBtn"className="btn btn-outline-primary my-2 my-sm-0"  onClick={this.handleSearch} type="submit">Search</button>
+        <button id="searchBtn"className="btn btn-outline-secondary my-2 my-sm-0"  onClick={this.handleSearch} type="submit">Search</button>
       </form>
-     </div>
-<br />
+      </div>
+        </div>
+     
 
 {/* <div>Click on carrots to filter names in ascending order</div> */}
-        <div>
-          <header id="h1"> 
+<div className="row no-gutters">
+
+   <div className="col-sm-2 col-lg-2">
+        
          <button type="button" className="btn btn-link"> Image </button>
+         </div>
+         <div className="col-sm-2 col-lg-2">
          <button type="button" onClick={this.sortName} className="btn btn-link"> Name </button>
+         </div>
+         <div className="col-sm-2 col-lg-2">
          <button type="button" className="btn btn-link"> Age </button>
-         <button type="button" className="btn btn-link"> Occupation </button>
-         <button type="button" className="btn btn-link"> Location </button>
-        </header>
+         </div>
+         <div className="col-sm-3 col-lg-3">
+         <button type="button" className="btn btn-link"> Phone </button>
+         </div>
+         <div className="col-sm-2 col-lg-2">
+        
+         <button type="button" className="btn btn-link"> Email </button>
+            
+        </div>
     </div>
+    
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
@@ -113,12 +125,15 @@ componentDidMount() {
             key={friend.id}
             name={friend.name}
             image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
+            age={friend.age}
+            phone={friend.phone}
+            email={friend.email}
           />
         ))}
+        </div>
       </Wrapper>
     );
   }
 }
+
 export default App;

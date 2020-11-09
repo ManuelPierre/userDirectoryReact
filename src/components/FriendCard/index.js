@@ -12,16 +12,20 @@ function FriendCard(props) {
           <img alt={props.name} src={props.image} />
            </div>
 
-    <div className="col-sm-3 col-md-3 col-lg-3" id ="content">
+    <div className="col-sm-2 col-md-2 col-lg-2" id ="content">
            {props.name}
             </div>
-            
-            <div className="col-sm-2 col-md-2 col-lg-3" id ="content1">
-           {props.occupation}
+            <div className="col-sm-2 col-md-2 col-lg-1" id ="content1">
+           {props.age}
             </div>
             <div className="col-sm-2 col-md-2 col-lg-3" id ="content2">
-          {props.location}
+          {props.phone}
             </div>
+            <div className="col-sm-2 col-md-2 col-lg-3" id ="content3">
+          {props.email}
+            </div>
+           
+  
   
     
        

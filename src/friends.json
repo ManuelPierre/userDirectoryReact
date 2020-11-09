@@ -19,7 +19,7 @@
     "occupation": "Product Owner",
     "location": "Jersey City",
     "email": "james.lee@example.com",
-    "age": 44,
+    "age": 34,
     "phone": "(316)-925-1001"
   
   },
@@ -28,84 +28,84 @@
      "id":3,
     "gender": "male",
     "name": "Darrell Carr",
-    "image":"https://randomuser.me/api/portraits/men/5.jpg",
+    "image":"https://bloximages.newyork1.vip.townnews.com/gazette.com/content/tncms/assets/v3/editorial/2/d5/2d58cbca-f8ce-11e8-82e0-f3256a23a61e/5c08381d64ab7.image.jpg",
     "occupation": "Developer",
     "location": "Omaha",
     "email": "darrell.carr@example.com",
-    "age": 57,
+    "age": 28,
     "phone": "(316)-925-1002"
   
   },
   {
     "id":4,
-   "gender": "male",
-   "name": "Darrell Carr",
-   "image":"https://randomuser.me/api/portraits/men/5.jpg",
+   "gender": "Feale",
+   "name": "Leslie Floor",
+   "image":  "https://randomuser.me/api/portraits/med/women/88.jpg",
    "occupation": "Developer",
    "location": "Omaha",
-   "email": "darrell.carr@example.com",
-   "age": 57,
-   "phone": "(316)-925-1002"
+   "email": "jamie.gordon@example.com",
+   "age": 37,
+   "phone": "(316)-925-1004"
  
  },
  {
   "id":5,
  "gender": "male",
- "name": "Darrell Carr",
- "image":"https://randomuser.me/api/portraits/men/5.jpg",
+ "name": "Clinton Allen",
+ "image": "https://randomuser.me/api/portraits/med/men/85.jpg",
  "occupation": "Developer",
  "location": "Omaha",
- "email": "darrell.carr@example.com",
- "age": 57,
- "phone": "(316)-925-1002"
+ "email": "clinton.allen@example.com",
+ "age": 41,
+ "phone": "(316)-925-1005"
 
 },
 {
   "id":6,
  "gender": "male",
- "name": "Darrell Carr",
+ "name": "Darrell Carlos",
  "image":"https://randomuser.me/api/portraits/men/5.jpg",
- "occupation": "Developer",
- "location": "Omaha",
- "email": "darrell.carr@example.com",
+ "occupation": "Operations",
+ "location": "New York",
+ "email": "darrell.carlos@example.com",
  "age": 57,
- "phone": "(316)-925-1002"
+ "phone": "(316)-925-1006"
 
 },
 {
   "id":7,
  "gender": "male",
- "name": "Darrell Carr",
- "image":"https://randomuser.me/api/portraits/men/5.jpg",
+ "name": "Jamie Wough",
+ "image":"https://randomuser.me/api/portraits/med/men/80.jpg",
  "occupation": "Developer",
  "location": "Omaha",
- "email": "darrell.carr@example.com",
- "age": 57,
- "phone": "(316)-925-1002"
+ "email": "jamie.wough@example.com",
+ "age": 42,
+ "phone": "(316)-925-1007"
 
 },
 {
   "id":8,
- "gender": "male",
- "name": "Darrell Carr",
- "image":"https://randomuser.me/api/portraits/men/5.jpg",
+ "gender": "female",
+ "name": "Leslie Bailey",
+ "image":"https://randomuser.me/api/portraits/med/women/79.jpg",
  "occupation": "Developer",
  "location": "Omaha",
- "email": "darrell.carr@example.com",
- "age": 57,
- "phone": "(316)-925-1002"
+ "email": "leslie.bailey@example.com",
+ "age": 32,
+ "phone": "(316)-925-1008"
 
 },
 {
   "id":9,
- "gender": "male",
- "name": "Darrell Carr",
- "image":"https://randomuser.me/api/portraits/men/5.jpg",
+ "gender": "female",
+ "name": "Tiffany Franklin",
+ "image": "https://randomuser.me/api/portraits/med/women/67.jpg",
  "occupation": "Developer",
  "location": "Omaha",
- "email": "darrell.carr@example.com",
- "age": 57,
- "phone": "(316)-925-1002"
+ "email": "tiffany.franklin@example.com",
+ "age": 27,
+ "phone": "(316)-925-1009"
 
 }
 ]
