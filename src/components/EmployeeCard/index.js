@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function FriendCard(props) {
+function EmployeeCard(props) {
   return (
    
 
@@ -24,12 +24,9 @@ function FriendCard(props) {
             <div className="col-sm-2 col-md-2 col-lg-3" id ="content3">
           {props.email}
             </div>
-           
-  
-  
-    
+               
        
-      <span onClick={() => props.removeFriend(props.id)} className="remove">
+      <span onClick={() => props.removeEmployee(props.id)} className="remove">
         𝘅
       </span>
     </div>
@@ -38,4 +35,4 @@ function FriendCard(props) {
   );
 }
 
-export default FriendCard;
+export default EmployeeCard;

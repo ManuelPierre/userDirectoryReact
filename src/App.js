@@ -1,36 +1,36 @@
 import React, {Component} from "react";
-import FriendCard from "./components/FriendCard";
+import  EmployeeCard from "./components/EmployeeCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import friends from "./friends.json";
+import employees from "./employees.json";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends,
+    employees,
     name: "",
-    friendsCopy: [{}]
+    employeesCopy: [{}]
     
   };
 
 componentDidMount() {
-  this.setState({friendsCopy: this.state.friends})
+  this.setState({employeesCopy: this.state.employees})
 }
-    removeFriend = id => {
+    removeEmployee = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
+    const employees = this.state.employees.filter(employee => employee.id !== id);
     // Set this.state.friends equal to the new friends array
     this.setState({
-      friends
+      employees
     });
   };
 
      sortName = () => {
 
-    let updatedFriends = this.state.friends
+    let updatedEmployees = this.state.employees
 
     // sort by name
-    updatedFriends.sort(function (a, b) {
+    updatedEmployees.sort(function (a, b) {
       var nameA = a.name.toUpperCase(); // ignore upper and lowercase
       var nameB = b.name.toUpperCase(); // ignore upper and lowercase
       if (nameA < nameB) {
@@ -44,7 +44,7 @@ componentDidMount() {
       return 0;
     });
 
-    this.setState({ friends: updatedFriends });
+    this.setState({ employees: updatedEmployees });
   };
 
 
@@ -59,7 +59,7 @@ componentDidMount() {
     
     })
 
-    this.setState({friends: this.state.friendsCopy})
+    this.setState({employees: this.state.employeesCopy})
     console.log("value",value);
 
    
@@ -69,11 +69,10 @@ componentDidMount() {
     event.preventDefault();
 
   let value = this.state.name.toUpperCase();
-  console.log("Nameeee",value )
-  let results = this.state.friends.filter(friend => friend.name.toUpperCase() === value || friend.name.toUpperCase().includes(value) );
-               
-  console.log("results",results);
-  this.setState({ friends: results });
+  
+  let results = this.state.employees.filter(employee => employee.name.toUpperCase() === value || employee.name.toUpperCase().includes(value) );
+
+  this.setState({ employees: results });
             
 };
 
@@ -118,16 +117,16 @@ componentDidMount() {
         </div>
     </div>
     
-        {this.state.friends.map(friend => (
-          <FriendCard
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-            age={friend.age}
-            phone={friend.phone}
-            email={friend.email}
+        {this.state.employees.map(employee => (
+          <EmployeeCard
+            removeEmployee={this.removeEmployee}
+            id={employee.id}
+            key={employee.id}
+            name={employee.name}
+            image={employee.image}
+            age={employee.age}
+            phone={employee.phone}
+            email={employee.email}
           />
         ))}
         </div>
